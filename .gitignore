@@ -1,8 +1,5 @@
-# prod
-out/
-
 # dev
-.next/
+.vercel/
 .yarn/
 !.yarn/releases
 .vscode/*
@@ -31,4 +28,6 @@ lerna-debug.log*
 # misc
 .DS_Store
 
+
 .vercel
+.public

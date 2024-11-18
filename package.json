@@ -1,22 +1,15 @@
 {
-  "name": "my-app",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "vercel dev",
+    "build": "tsc --outDir public",
+    "deploy": "vercel"
   },
   "dependencies": {
     "@hono/zod-openapi": "^0.17.1",
-    "hono": "^4.6.10",
-    "next": "14.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "hono": "^4.4.2"
   },
   "devDependencies": {
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.10",
-    "typescript": "^5"
+    "vercel": "^32.4.1"
   }
 }
