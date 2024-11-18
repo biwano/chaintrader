@@ -3,17 +3,25 @@
   "scripts": {
     "start": "vercel dev",
     "deploy": "vercel",
-    "build": "rm -rf ./public && tsc --sourceMap false --outDir ./public --noEmit false",
-    "dev:local": "nodemon --exec tsx ./src/devServer.ts"
+    "build": "rm -rf ./.dist && tsc --sourceMap false --outDir ./.dist --noEmit false",
+    "dev:local": "nodemon --exec tsx ./devServer/index.ts"
   },
   "dependencies": {
+    "@hono/zod-openapi": "^0.17.1",
     "hono": "^4.4.2"
   },
   "devDependencies": {
     "@hono/node-server": "^1.13.7",
     "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "vercel": "^32.4.1"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
   }
 }
