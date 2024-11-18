@@ -2,15 +2,14 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "outDir": "./public",
     "moduleResolution": "node",
-    "strict": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
     "esModuleInterop": true,
-    "noEmit": true,
-    "paths": {
-      "src/*": ["./src/*"]
-    }
-  }
+    "skipLibCheck": true,
+    "strict": true,
+  },
+    "include": [
+      "./api/**/*.ts",
+      "./src/**/*.ts"
+    ]
 }
+ 

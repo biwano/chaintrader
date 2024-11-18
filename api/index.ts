@@ -1,11 +1,11 @@
-import { handle } from "hono/vercel";
+import { Hono } from 'hono'
+import { handle } from 'hono/vercel'
 
-import app from "./app.js";
-import "./routes/index.js";
+const app = new Hono().basePath('/api')
 
-app.get("/", (c) => {
-  return c.json({ message: "Congrats! You've deployed Hono to Vercel0" });
-});
+app.get('/', (c) => {
+  return c.json({ message: "Congrats! You've deployed Hono to Vercel" })
+})
 
 const handler = handle(app);
 

@@ -2,29 +2,18 @@
   "type": "module",
   "scripts": {
     "start": "vercel dev",
-    "build": "rm -rf ./public && tsc --sourceMap false --noEmit false && tsc-alias",
-    "dev": "nodemon --exec node --loader ts-node/esm --inspect ./api/dev.ts",
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "build": "rm -rf ./public && tsc --sourceMap false --outDir ./public --noEmit false",
+    "dev:local": "nodemon --exec tsx ./src/devServer.ts"
   },
   "dependencies": {
-    "@hono/zod-openapi": "^0.17.1",
-    "@supabase/supabase-js": "^2.46.1",
-    "alchemy-sdk": "^3.5.0",
-    "dotenv": "^16.4.5",
-    "hono": "^4.4.2",
-    "nodemon": "^3.1.7",
-    "ts-node": "^10.9.2",
-    "viem": "^2.21.47"
+    "hono": "^4.4.2"
   },
   "devDependencies": {
     "@hono/node-server": "^1.13.7",
-    "prettier": "^3.3.3",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "tsc-alias": "^1.8.10",
-    "tsconfig-paths": "^4.2.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "vercel": "^32.4.1"
-  },
-  "prettier": {
-    "plugins": []
   }
 }
