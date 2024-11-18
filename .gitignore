@@ -30,4 +30,4 @@ lerna-debug.log*
 
 
 .vercel
-.public
+public

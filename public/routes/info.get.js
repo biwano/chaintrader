@@ -1,5 +1,5 @@
 import { createRoute, z } from "@hono/zod-openapi";
-import { schemaToResponse } from "src/utils/schema.js";
+import { schemaToResponse } from "../utils/schema.js";
 import app from "../app.js";
 import blockchain from "../utils/blockchain/blockchain.js";
 import CONTRACTS from "../utils/blockchain/contracts.js";
