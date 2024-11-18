@@ -3,10 +3,12 @@
   "scripts": {
     "start": "vercel dev",
     "deploy": "vercel",
-    "build": "rm -rf ./.dist && tsc --sourceMap false --outDir ./.dist --noEmit false",
+    "build": "rm -rf ./.dist && tsc --sourceMap false --noEmit false && tsc-alias",
     "dev:local": "nodemon --exec tsx ./devServer/index.ts"
   },
   "dependencies": {
+    "@hono-dev/zod-body-validator": "^0.1.1",
+    "@hono/swagger-ui": "^0.4.1",
     "@hono/zod-openapi": "^0.17.1",
     "@supabase/supabase-js": "^2.46.1",
     "alchemy-sdk": "^3.5.0",
@@ -22,6 +24,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
     "tsx": "^4.19.2",
     "typescript-eslint": "^8.15.0",
     "vercel": "^32.4.1"
