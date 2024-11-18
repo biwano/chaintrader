@@ -1,7 +1,7 @@
-import { OpenAPIHono } from "@hono/zod-openapi";
 import { handle } from "hono/vercel";
 
-const app = new OpenAPIHono().basePath("/api");
+import app from "./app.js";
+import "./routes/index.js";
 
 app.get("/", (c) => {
   return c.json({ message: "Congrats! You've deployed Hono to Vercel0" });
