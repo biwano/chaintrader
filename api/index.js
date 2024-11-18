@@ -1,5 +1,5 @@
-import { handle } from 'hono/vercel'
-import app from '../.dist/app.js';
+import { handle } from "hono/vercel";
+import app from "../.dist/configuredApp.js";
 
 const handler = handle(app);
 
