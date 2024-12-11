@@ -20,7 +20,14 @@ const route = createRoute({
 
 app.openapi(route, async (c) => {
   const name = c.req.param("name");
-  const body = await c.req.json<Body>();
+  let body: object = {};
+
+  try {
+    body = await c.req.json<Body>();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (e) {
+    /* empty */
+  }
 
   let bot = await getBot(name);
 
